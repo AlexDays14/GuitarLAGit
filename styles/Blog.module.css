@@ -1,0 +1,15 @@
+.blogs{
+    display: grid;
+    gap: 4rem;
+}
+@media(min-width:768px){
+    .blogs{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6rem 4rem;
+    }
+}
+@media(min-width:992px){
+    .blogs{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
