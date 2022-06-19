@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
   }, [carrito])
 
   function agregarCarrito(producto){
-    if(carrito.some(articulo => articulo._id === producto._id)){
+    if(carrito.some(articulo => articulo._id === producto.id)){
       const carritoActualizado = carrito.map(guitarra => {
         if(guitarra._id === producto._id){
           guitarra.cantidad = producto.cantidad
