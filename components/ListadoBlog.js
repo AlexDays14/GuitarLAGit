@@ -9,7 +9,7 @@ const ListadoBlog = ({blog}) => {
             <div className={styles.blogs}>
                 {blog.map(entrada => (
                     <Entrada
-                        key={entrada._id}
+                        key={entrada.id}
                         entrada={entrada}
                     />
                 ))}

@@ -18,9 +18,9 @@ function MyApp({ Component, pageProps }) {
   }, [carrito])
 
   function agregarCarrito(producto){
-    if(carrito.some(articulo => articulo._id === producto.id)){
+    if(carrito.some(articulo => articulo.id === producto.id)){
       const carritoActualizado = carrito.map(guitarra => {
-        if(guitarra._id === producto.id){
+        if(guitarra.id === producto.id){
           guitarra.cantidad = producto.cantidad
         }
         return guitarra;
@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
 
   function actualizarCantidad(producto){
     const carritoActualizado = carrito.map(articulo => {
-      if(articulo._id === producto.id){
+      if(articulo.id === producto.id){
         articulo.cantidad = producto.cantidad
       }
       return articulo;
@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
   }
 
   function eliminarProducto(id){
-    const carritoActualizado = carrito.filter(articulo => articulo._id !== id)
+    const carritoActualizado = carrito.filter(articulo => articulo.id !== id)
     setCarrito(carritoActualizado);
   }
 
